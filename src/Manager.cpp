@@ -30,7 +30,7 @@ manager::manager()
     //保存文件
     void manager::Save()//包括 goods 的保存和 manager 的保存
     {
-        ofstream ofs("account.txt",ios::out|ios::app);
+        ofstream ofs("./source/account.txt",ios::out|ios::app);
         ofs<<this->username<<" "<<this->passward<<endl;
         //cout<<ofs.rdbuf()<<endl;
         ofs.close();
@@ -41,7 +41,7 @@ manager::manager()
     {
         for(int i= 0;i< n;i++)
         {
-            ifstream ifs("account.txt",ios::in);
+            ifstream ifs("./source/account.txt",ios::in);
             ifs>>man[i].username>>man[i].passward;
             ifs.close();
         }
@@ -84,11 +84,11 @@ if(n>0)
     string b;
     cin>>b;
 //    manager  m (a,b);
-    ifstream ifs("account.txt",ios::in);
-//    ifstream ifs("goods.txt",ios::in);
+    ifstream ifs("./source/account.txt",ios::in);
+//    ifstream ifs("./source/goods.txt",ios::in);
 //        if(!ifs.is_open())
 //        {
-//            ofstream ofs("goods.txt");
+//            ofstream ofs("./source/goods.txt");
 //        }
         for(int i=0;i<n;i++)
         {
@@ -104,8 +104,8 @@ if(n>0)
         if(a==man[i].GetUsername()&&b==man[i].GetPassward())
         {
             cout<<"欢迎进入经营者系统\n";
-            system("pause");
-            system("cls");
+            ;
+            ;
 
             return true;
         }

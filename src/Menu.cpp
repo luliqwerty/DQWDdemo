@@ -45,7 +45,7 @@ void tongjishumu()
     if(n>0)
     {
         goods Goods[n];
-        ifstream ifs("goods.txt",ios::in);
+        ifstream ifs("./source/goods.txt",ios::in);
 
         for(int i=0;i<n;i++)
         {
@@ -74,7 +74,7 @@ float sumprice()
     int n = CalculateGoodsInfoFileLen();
     goods Goods[n];
     float sum = 0;
-    ifstream ifs("goodsinfo.txt",ios::in);
+    ifstream ifs("./source/goodsinfo.txt",ios::in);
     for(int i=0;i<n;i++)
 
     {
@@ -113,7 +113,7 @@ void menu::ShowManagerMenu2()
 
                     manager man;
                     ///man.ShowGoods();
-                    ifstream ifs("goods.txt",ios::in);
+                    ifstream ifs("./source/goods.txt",ios::in);
 
                     string buff;
                     int n = CalculateGoodsFileLen();
@@ -126,8 +126,8 @@ void menu::ShowManagerMenu2()
 
                     }
                     else cout<<"没货了，快去进货吧老板!\n";
-                    system("pause");
-                    system("cls");
+                    ;
+                    ;
 
                    // flag = 1;
                     continue;
@@ -136,8 +136,8 @@ void menu::ShowManagerMenu2()
                 {
 
                     tongjishumu();
-                    system("pause");
-                    system("cls");
+                    ;
+                    ;
                     //flag = 1;
                     continue;
                 }
@@ -150,7 +150,7 @@ void menu::ShowManagerMenu2()
                 }
                 if(choice3==4)                 //输出所有购买记录
                 {
-                    ifstream ifs("goodsinfo.txt",ios::in);
+                    ifstream ifs("./source/goodsinfo.txt",ios::in);
 
                     string buff;
                     int n = CalculateGoodsInfoFileLen();
@@ -161,14 +161,14 @@ void menu::ShowManagerMenu2()
                         cout<<buff<<endl;
                     }
 
-                    system("pause");
-                    system("cls");
+                    ;
+                    ;
                     }
                     else
                     {
                         cout<<"今天还没有购买记录呢！\n";
-                        system("pause");
-                        system("cls");
+                        ;
+                        ;
 
                     }
                     //flag = 1;
@@ -178,8 +178,8 @@ void menu::ShowManagerMenu2()
                 {
                     float sum=sumprice();
                     cout<<"今天的营业额为："<<sum<<" 元 "<<endl;
-                    system("pause");
-                    system("cls");
+                    ;
+                    ;
 
                     //flag = 1;
                     continue;
@@ -188,8 +188,8 @@ void menu::ShowManagerMenu2()
             }
 //            if(flag==-1)
 //                    {
-//                        //system("pause");
-//                        //system("cls");
+//                        //;
+//                        //;
 //                        //break;
 //                        return;
 //                        //goto FLAG;
@@ -219,13 +219,13 @@ void menu::ShowManagerMenu2()
 
     void menu::ShowManagerMenu2_3()
     {
-            system("cls");
+            ;
             goods goo;
             cout<<"请输入您要添加的饮品名称和价格\n";
             cin>>goo;
             goo.Save1();
             //goo.Read( & goo,1);
             cout<<"成功添加饮料\n";
-            system("pause");
+            ;
 
     }

@@ -76,8 +76,8 @@ int main()
                 if(man.LogIn()==true)
                {
                     mm.ShowManagerMenu2();
-                    system("pause");
-                    system("cls");
+                    ;
+                    ;
 
 
                }
@@ -94,30 +94,30 @@ int main()
                 if(man.LogIn()==true)
                 {
                     mm.ShowManagerMenu2();
-                    system("cls");
+                    ;
                 }
 
-                //system("pause");
+                //;
                 else
                 {
                     cout<<"账号或密码输入错误\n";
-                    system("pause");
-                    system("cls");
+                    ;
+                    ;
                     continue;
                 }
                 }
                 else
                 {
                     cout<<"抱歉，后台没检测到账户，请您先注册吧！\n";
-                    system("pause");
-                    system("cls");
+                    ;
+                    ;
                 }
 
                 //break;
             }
             else if(choice2 == 0)
             {
-                system("cls");
+                ;
                 continue;
 
             }
@@ -129,7 +129,7 @@ int main()
         }
         else
         {
-            system("cls");
+            ;
             cout<<"输入有误\n";
             continue;
 
